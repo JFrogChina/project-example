@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../Tests.props" />
+
+  <ItemGroup>
+    <Compile Include="..\GraphQL.Tests\GraphQLSerializersTestData.cs" Link="GraphQLSerializersTestData.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.*" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.*" />
+    <PackageReference Include="System.Reactive" Version="6.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraphQL.NewtonsoftJson\GraphQL.NewtonsoftJson.csproj" />
+    <ProjectReference Include="..\GraphQL.SystemTextJson\GraphQL.SystemTextJson.csproj" />
+    <ProjectReference Include="..\GraphQL.DataLoader\GraphQL.DataLoader.csproj" />
+    <ProjectReference Include="..\GraphQL.MicrosoftDI\GraphQL.MicrosoftDI.csproj" />
+  </ItemGroup>
+
+</Project>

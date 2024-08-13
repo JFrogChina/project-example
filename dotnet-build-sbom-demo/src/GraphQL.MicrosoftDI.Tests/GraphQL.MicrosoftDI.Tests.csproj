@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../Tests.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.*" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.*" />
+    <PackageReference Include="System.Reactive" Version="6.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraphQL.MicrosoftDI\GraphQL.MicrosoftDI.csproj" />
+    <ProjectReference Include="..\GraphQL.SystemTextJson\GraphQL.SystemTextJson.csproj" />
+  </ItemGroup>
+
+</Project>

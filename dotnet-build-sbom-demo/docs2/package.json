@@ -1,0 +1,43 @@
+{
+  "name": "graphql-dotnet-docs",
+  "description": "GraphQL .NET Docs",
+  "version": "1.0.0",
+  "author": "Joe McBride",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "deploy": "bash publish_docs.sh",
+    "format": "prettier --write 'src/**/*.js'"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "gatsby": "5.9.1",
+    "gatsby-plugin-react-helmet": "^6.8.0",
+    "gatsby-plugin-sharp": "^5.8.1",
+    "gatsby-remark-autolink-headers": "^6.8.0",
+    "gatsby-remark-images": "^7.8.0",
+    "gatsby-remark-prismjs": "^7.8.0",
+    "gatsby-source-filesystem": "^5.8.0",
+    "gatsby-transformer-remark": "^6.8.0",
+    "gatsby-transformer-yaml": "^5.8.0",
+    "normalize.css": "^8.0.1",
+    "prismjs": "^1.29.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.3",
+    "gatsby-node-helpers": "^1.2.1",
+    "gh-pages": "^5.0.0",
+    "github-slugger": "^2.0.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "prettier": "^2.8.7",
+    "babel-eslint": "^10.1.0",
+    "typescript": "^5.0.4",
+    "eslint": "^4.12.1"
+  }
+}

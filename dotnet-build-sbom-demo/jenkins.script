@@ -1,0 +1,21 @@
+node {
+
+    stage ('Clone') {
+        git branch:'main' ,url: 'https://github.com/JFrogChina/dotnet-build-sbom-demo.git'
+    }
+
+    stage ('Artifactory configuration') {
+        sh "jf dotnetc --repo-resolve=liweinuget-nuget-remote "
+    }
+
+    stage ('.NET restore') {
+        dir("./dotnet-build-sbom-demo/"){
+            sh "jf dotnet restore ./src/GraphQL.sln --build-name=${env.JOB_NAME} --build-number=${env.BUILD_NUMBER} --project=liweinuget "
+        }
+    }
+    stage ('Push Build Info') {
+        sh "jf rt bce ${env.JOB_NAME} ${env.BUILD_NUMBER} --project=liweinuget "
+        sh "jf rt bp ${env.JOB_NAME} ${env.BUILD_NUMBER} --project=liweinuget"
+    }
+
+}
